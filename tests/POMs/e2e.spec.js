@@ -1,10 +1,10 @@
 import { test,expect } from '@playwright/test';
-import { LoginPage } from './POMs/loginpage';
-import { InventoryPage } from './POMs/inventorypage';
-import { CartPage } from './POMs/cartpage';
-import { CheckoutStepOnePage } from './POMs/CheckoutStepOnePage';
-import { CheckoutStepTwoPage } from './POMs/CheckoutStepTwoPage';
-import { CheckoutCompletePage } from './POMs/CheckoutCompletePage';
+import { LoginPage } from './loginpage';
+import { InventoryPage } from './inventorypage';
+import { CartPage } from './cartpage';
+import { CheckoutStepOnePage } from './CheckoutStepOnePage';
+import { CheckoutStepTwoPage } from './CheckoutStepTwoPage';
+import { CheckoutCompletePage } from './CheckoutCompletePage';
 
 test ('End-to-end test', async ({page})=>{
     const loginpage = new LoginPage (page);
