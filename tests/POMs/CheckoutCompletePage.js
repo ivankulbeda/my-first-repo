@@ -1,3 +1,4 @@
+import {expect} from '@playwright/test';
 export class CheckoutCompletePage {
     constructor (page) {
         this.page = page;
@@ -5,6 +6,6 @@ export class CheckoutCompletePage {
         this.button = page.locator('[data-test="back-to-products"]');
     }
     async getCompletionMessage () {
-        return await this.title.textContent();
+        await expect (this.title).toBeVisible();
     }
 }

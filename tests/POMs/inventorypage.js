@@ -1,3 +1,4 @@
+import {expect} from '@playwright/test';
 export class InventoryPage {
     constructor (page) {
         this.page = page;
@@ -14,7 +15,7 @@ export class InventoryPage {
         await this.cart.click();
     }
     async getPageTitle () {
-        return await this.title.textContent();
+        await expect (this.title).toBeVisible();
     }
     async sort () {
         await this.sortbutton.selectOption('hilo');
