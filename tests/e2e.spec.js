@@ -20,7 +20,7 @@ test ('End-to-end test', async ({page})=>{
     await inventorypage.sort();
     await inventorypage.addItemToCart ('sauce-labs-fleece-jacket');
     await inventorypage.openCart();
-    await cartpage.check ();
+    await cartpage.checkItemList ();
     await cartpage.goToCheckout();
     await checkoutstepone.fillUserInfo('Ivan','Kulbeda','11111');
     await checkoutstepone.continueCheckout();

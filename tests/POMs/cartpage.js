@@ -6,7 +6,7 @@ export class CartPage {
         this.checkout = page.locator ('[data-test="checkout"]');
         this.continueShopping = page.locator ('[data-test="continue-shopping"]');   
       }
-      async check () {
+      async checkItemList () {
         await expect (this.itemsList).toBeVisible();
       }
       async goToCheckout () {
